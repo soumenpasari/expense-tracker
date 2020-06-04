@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 export const Balance = () => {
     return (
-        <Fragment>
+        <div>
             <h6 className='grey-text'>Balance</h6>
             <h5>0.0</h5>
             <div className='divider'></div>
-        </Fragment>
+        </div>
     )
 }

@@ -19,10 +19,18 @@ function App() {
     <Fragment>
       <Navbar />
       <div className='container'>
-        <Balance />
-        <IncomeExpense />
-        <TransactionList />
-        <AddTransaction />
+        <div className='row'>
+          <div className='col s12 m12 l4 xl4'>
+              <Balance />
+              <IncomeExpense />
+          </div>
+          <div className='col s12 m12 l4 xl4'>
+              <TransactionList />
+          </div>
+          <div className='col s12 m12 l4 xl4'>
+              <AddTransaction />
+          </div>
+        </div>
       </div>
     </Fragment>
   );
