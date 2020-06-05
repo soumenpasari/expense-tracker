@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css';
@@ -10,13 +10,15 @@ import {IncomeExpense} from './components/IncomeExpense';
 import {TransactionList} from './components/TransactionList';
 import {AddTransaction} from './components/AddTransaction';
 
+import {GlobalProvider} from './context/GlobalState';
+
 function App() {
   useEffect(() => {
     // Auto initialize all the things!
     M.AutoInit();
   });
   return (
-    <Fragment>
+    <GlobalProvider>
       <Navbar />
       <div className='container'>
         <div className='row'>
@@ -32,7 +34,7 @@ function App() {
           </div>
         </div>
       </div>
-    </Fragment>
+    </GlobalProvider>
   );
 }
 
